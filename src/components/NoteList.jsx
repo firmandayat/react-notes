@@ -3,7 +3,7 @@ import NoteItem from "./NoteItem";
 
 function NoteList({notes}){
     return(
-        <div className="note-list">
+        <div className="notes-list">
             {
                 notes.map((note) => (
                     <NoteItem key={note.id} {...note}/>

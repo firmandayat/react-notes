@@ -7,7 +7,7 @@ function NoteApp(){
 
     return(
         <div className="note-app">
-            <h1>Daftar Notes</h1>
+            <h1 className="note-app__header">Daftar Notes</h1>
             <NoteList notes={notes}/>
         </div>
     )

@@ -8,8 +8,10 @@ function NoteItemBody({title, createdAt ,body}){
             <p className="note-item__date">{createdAt}</p>
             <p className="note-item__body">{body}</p>
             <br />
-            <button className="note-item__button">Archive</button>
-            <button className="note-item__button">Delete</button>
+                <div className="note-item__button">
+                    <button className="note-item__archive-button">Archive</button>
+                    <button className="note-item__delete-button">Delete</button>
+                </div>
         </div>
     )
 }
