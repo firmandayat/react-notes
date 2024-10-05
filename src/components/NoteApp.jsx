@@ -6,7 +6,7 @@ class NoteApp extends React.Component{
     constructor(props){
         super(props)
         this.state = {
-            notes: getInitialData
+            notes: getInitialData()
         }
         this.onDeleteHandler = this.onDeleteHandler.bind(this)
     }
