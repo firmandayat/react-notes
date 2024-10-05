@@ -7,10 +7,11 @@ class NoteInput extends React.Component{
         this.state = {
             title : '',
             body: '',
+            titleMaxLength: 50
         }
 
         this.onTitleChangeEventHandler = this.onTitleChangeEventHandler.bind(this)
-        this.onContentChangeEventHandler = this.onContentChangeEventHandler.bind(this)
+        this.onBodyChangeEventHandler = this.onBodyChangeEventHandler.bind(this)
         this.onSubmitChangeEventHandler = this.onSubmitChangeEventHandler.bind(this)
 
     }
@@ -23,7 +24,7 @@ class NoteInput extends React.Component{
         })
     }
 
-    onContentChangeEventHandler(event){
+    onBodyChangeEventHandler(event){
         this.setState(() => {
             return{
                 body: event.target.value
@@ -39,8 +40,9 @@ class NoteInput extends React.Component{
     render(){
         return(
             <form className="note-input" onSubmit={this.onSubmitChangeEventHandler}>
-                <input type="text" placeholder="Title" value={this.state.title} onChange={this.onTitleChangeEventHandler}/>
-                <input type="text" placeholder="Content" value={this.state.body} onChange={this.onContentChangeEventHandler}/>
+                <p className="note-input__title__char-limit">Limit Character: {this.state.titleMaxLength - this.state.title.length}</p>
+                <input type="text" placeholder="Title" value={this.state.title} onChange={this.onTitleChangeEventHandler} maxLength={this.state.titleMaxLength}/>
+                <input type="text" placeholder="Content" value={this.state.body} onChange={this.onBodyChangeEventHandler}/>
                 <button type="submit" className="note-input">Add New Note</button>
             </form>
         )
