@@ -1,6 +1,7 @@
 import React from "react";
+import DeleteButton from "./DeleteButton";
 
-function NoteItemBody({title, createdAt ,body}){
+function NoteItemBody({title, createdAt ,body, id, onDelete}){
     return(
         <div className="note-item__body">
             <br />
@@ -10,7 +11,7 @@ function NoteItemBody({title, createdAt ,body}){
             <br />
                 <div className="note-item__button">
                     <button className="note-item__archive-button">Archive</button>
-                    <button className="note-item__delete-button">Delete</button>
+                    <DeleteButton id={id} onDelete={onDelete}/>
                 </div>
         </div>
     )

@@ -161,6 +161,7 @@ input::placeholder, textarea::placeholder {
 
 .note-item__button{
   display: flex;
+  gap: 10px;
 }
 
 .note-item__archive-button {
