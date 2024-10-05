@@ -1,15 +1,15 @@
 import React from "react";
 import NoteItem from "./NoteItem";
 
-function NoteList({notes, onDelete}){
+function NoteList({notes, onDelete, onArchived}){
     return(
         <div className="notes-list">
             { notes.length > 0 ? (
                 notes.map((note) => (
-                    <NoteItem key={note.id} id={note.id} onDelete={onDelete} {...note}/>
+                    <NoteItem key={note.id} id={note.id} onDelete={onDelete} onArchived={onArchived} {...note}/>
                 ))) : (
                     <h3 className="notes-list__empty-message">
-                        Tidak ada catatan
+                        Empty notes
                     </h3>
                 )
             }

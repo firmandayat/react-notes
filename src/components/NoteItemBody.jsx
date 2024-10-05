@@ -1,7 +1,8 @@
 import React from "react";
 import DeleteButton from "./DeleteButton";
+import ArchiveButton from "./archivedButton";
 
-function NoteItemBody({title, createdAt, body, id, onDelete}){
+function NoteItemBody({title, createdAt, body, id, onDelete, onArchived}){
     return(
         <div className="note-item__body">
             <br />
@@ -10,7 +11,7 @@ function NoteItemBody({title, createdAt, body, id, onDelete}){
             <p className="note-item__body">{body}</p>
             <br />
                 <div className="note-item__button">
-                    <button className="note-item__archive-button">Archive</button>
+                    <ArchiveButton id={id} onArchived={onArchived}/>
                     <DeleteButton id={id} onDelete={onDelete}/>
                 </div>
         </div>
