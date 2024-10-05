@@ -30,6 +30,8 @@ input::placeholder, textarea::placeholder {
 }
 
 .note-app__header {
+  position: fixed;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,7 +39,6 @@ input::placeholder, textarea::placeholder {
   border-bottom: 1px solid #aaa;
   color: white;
   background-color: #9DC183;
-  margin-bottom: 30px;
 }
 
 .note-app__header h1 {
@@ -45,7 +46,6 @@ input::placeholder, textarea::placeholder {
   flex: 1;
   color: white;
 }
-
 
 .note-app__body {
   max-width: 1000px;
@@ -59,8 +59,15 @@ input::placeholder, textarea::placeholder {
 }
 
 .note-app__title{
+  padding-top: 100px;
   text-align: center;
   color: #86918b;
+}
+
+.note-app__title-item{
+  text-align: center;
+  color: #86918b;
+  margin-bottom: 10px;
 }
 
 .note-input {
