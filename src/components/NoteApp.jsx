@@ -1,6 +1,7 @@
 import React from "react";
 import NoteList from "./NoteList";
 import {getInitialData} from "../utils/index"
+import NoteInput from "./NoteInput"
 
 class NoteApp extends React.Component{
     constructor(props){
@@ -9,6 +10,7 @@ class NoteApp extends React.Component{
             notes: getInitialData()
         }
         this.onDeleteHandler = this.onDeleteHandler.bind(this)
+        this.onAddNoteHandler = this.onAddNoteHandler.bind(this)
     }
 
     onDeleteHandler(id){
@@ -16,10 +18,29 @@ class NoteApp extends React.Component{
         this.setState({notes})
     }
 
+    onAddNoteHandler({title, body}){
+        this.setState((prevState) => {
+            return{
+                notes: [
+                    ...prevState.notes,
+                    {
+                        id: +new Date(),
+                        title,
+                        body,
+                        createdAt:new Date().toISOString(),
+                        archived:false
+                    }
+                ]
+            }
+        })
+    }
+
     render(){
         return(
               <div className="note-app">
-              <h1 className="note-app__header">Daftar Notes</h1>
+              <h1 className="note-app__header">My Notes</h1>
+              <h3 className="note-app__title">Add Note</h3>
+              <NoteInput addNote={this.onAddNoteHandler}/>
               <NoteList notes={this.state.notes} onDelete={this.onDeleteHandler}/>
               </div>
         )
