@@ -72,7 +72,7 @@ class NoteApp extends React.Component{
               <h3 className="note-app__title">Add Note</h3>
               <NoteInput addNote={this.onAddNoteHandler}/>
 
-              <i><FaSearch/>
+              <i className="note-app__search-wrapper"><FaSearch/>
               <input className="note-app__search" type="text" placeholder="Search notes..." value={this.state.searchNote} onChange={this.onSearchHandler}/>
               </i>
 
