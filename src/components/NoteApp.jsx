@@ -11,7 +11,7 @@ class NoteApp extends React.Component{
         }
         this.onDeleteHandler = this.onDeleteHandler.bind(this)
         this.onAddNoteHandler = this.onAddNoteHandler.bind(this)
-        this.onArchivedHandler = this.onArchiveHandler.bind(this);
+        this.onArchiveHandler = this.onArchiveHandler.bind(this);
     }
 
     onDeleteHandler(id){
@@ -57,10 +57,10 @@ class NoteApp extends React.Component{
               <NoteInput addNote={this.onAddNoteHandler}/>
 
               <h3 className="note-app__title-item">Active Notes</h3>
-              <NoteList notes={activeNotes} onDelete={this.onDeleteHandler} onArchive={this.onArchiveHandler} />
+              <NoteList notes={activeNotes} onDelete={this.onDeleteHandler} onArchived={this.onArchiveHandler} />
               <br /><br />
               <h3 className="note-app__title-item">Archived Notes</h3>
-              <NoteList notes={archivedNotes} onDelete={this.onDeleteHandler} onArchive={this.onArchiveHandler} />
+              <NoteList notes={archivedNotes} onDelete={this.onDeleteHandler} onArchived={this.onArchiveHandler} />
 
               {/* <NoteList notes={this.state.notes} onDelete={this.onDeleteHandler}/> */}
               </div>
