@@ -4,7 +4,7 @@ import ArchivedButton from "./ArchivedButton";
 
 function NoteItemBody({title, createdAt, body, id, onDelete, onArchived, archived}){
     return(
-        <div className="note-item__body">
+        <>
             <br />
             <h3 className="note-item__title">{title}</h3>
             <p className="note-item__date">{createdAt}</p>
@@ -14,7 +14,7 @@ function NoteItemBody({title, createdAt, body, id, onDelete, onArchived, archive
                     <ArchivedButton id={id} onArchived={onArchived} isArchived={archived}/>
                     <DeleteButton id={id} onDelete={onDelete}/>
                 </div>
-        </div>
+        </>
     )
 }
 
