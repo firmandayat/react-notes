@@ -1,6 +1,6 @@
 import React from "react";
 import DeleteButton from "./DeleteButton";
-import ArchiveButton from "./archivedButton";
+import ArchiveButton from "./ArchivedButton";
 
 function NoteItemBody({title, createdAt, body, id, onDelete, onArchived}){
     return(

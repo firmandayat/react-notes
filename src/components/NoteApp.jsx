@@ -11,7 +11,7 @@ class NoteApp extends React.Component{
         }
         this.onDeleteHandler = this.onDeleteHandler.bind(this)
         this.onAddNoteHandler = this.onAddNoteHandler.bind(this)
-        this.onArchivedHandler = this.onArchiveEventHandler.bind(this);
+        this.onArchivedHandler = this.onArchiveHandler.bind(this);
     }
 
     onDeleteHandler(id){
@@ -36,7 +36,7 @@ class NoteApp extends React.Component{
         })
     }
 
-     onArchiveEventHandler(id) {
+     onArchiveHandler(id) {
         const notes = this.state.notes.map((note) => {
         if (note.id === id) {
             return { ...note, archived: !note.archived }
