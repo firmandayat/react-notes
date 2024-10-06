@@ -40,10 +40,10 @@ class NoteInput extends React.Component{
     render(){
         return(
             <form className="note-input" onSubmit={this.onSubmitChangeEventHandler}>
-                <p className="note-input__title__char-limit">Limit Character: {this.state.titleMaxLength - this.state.title.length}</p>
-                <input type="text" placeholder="Title" value={this.state.title} onChange={this.onTitleChangeEventHandler} maxLength={this.state.titleMaxLength}/>
-                <input type="text" placeholder="Content" value={this.state.body} onChange={this.onBodyChangeEventHandler}/>
-                <button type="submit" className="note-input">Add New Note</button>
+                <p className="note-input__title__char-limit reveal">Limit Character: {this.state.titleMaxLength - this.state.title.length}</p>
+                <input className="reveal" type="text" placeholder="Title" value={this.state.title} onChange={this.onTitleChangeEventHandler} maxLength={this.state.titleMaxLength}/>
+                <input className="reveal" type="text" placeholder="Content" value={this.state.body} onChange={this.onBodyChangeEventHandler}/>
+                <button type="submit" className="note-input reveal">Add New Note</button>
             </form>
         )
     }

@@ -18,6 +18,21 @@ class NoteApp extends React.Component{
         this.onSearchHandler = this.onSearchHandler.bind(this);
     }
 
+      componentDidMount() {
+        window.ScrollReveal().reveal(".reveal", {
+        duration: 1000,
+        distance: "50px",
+        origin: "bottom",
+        reset: true
+        });
+        window.ScrollReveal().reveal(".reveal1", {
+        duration: 2000,
+        distance: "100px",
+        origin: "bottom",
+        reset: true
+        });
+    }
+
     onDeleteHandler(id){
         const notes = this.state.notes.filter(note => note.id !== id)
         this.setState({notes})
@@ -69,17 +84,17 @@ class NoteApp extends React.Component{
         return(
               <div className="note-app">
               <h1 className="note-app__header">My Notes</h1>
-              <h3 className="note-app__title">Add Note</h3>
+              <h3 className="note-app__title reveal">Add Note</h3>
               <NoteInput addNote={this.onAddNoteHandler}/>
 
               <i className="note-app__search-wrapper"><FaSearch/>
               <input className="note-app__search" type="text" placeholder="Search notes..." value={this.state.searchNote} onChange={this.onSearchHandler}/>
               </i>
 
-              <h3 className="note-app__title-item">Active Notes</h3>
+              <h3 className="note-app__title-item reveal">Active Notes</h3>
               <NoteList notes={filteredActiveNotes} onDelete={this.onDeleteHandler} onArchived={this.onArchiveHandler} />
-              <br /><br />
-              <h3 className="note-app__title-item">Archived Notes</h3>
+              <br/><br/>
+              <h3 className="note-app__title-item reveal">Archived Notes</h3>
               <NoteList notes={filteredArchivedNotes} onDelete={this.onDeleteHandler} onArchived={this.onArchiveHandler} />
 
               <Footer/>
