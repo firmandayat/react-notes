@@ -2,6 +2,8 @@ import React from "react";
 import NoteList from "./NoteList";
 import {getInitialData} from "../utils/index"
 import NoteInput from "./NoteInput"
+import { FaSearch } from "react-icons/fa";
+import Footer from "./Footer";
 
 class NoteApp extends React.Component{
     constructor(props){
@@ -70,13 +72,17 @@ class NoteApp extends React.Component{
               <h3 className="note-app__title">Add Note</h3>
               <NoteInput addNote={this.onAddNoteHandler}/>
 
+              <i><FaSearch/>
               <input className="note-app__search" type="text" placeholder="Search notes..." value={this.state.searchNote} onChange={this.onSearchHandler}/>
+              </i>
 
               <h3 className="note-app__title-item">Active Notes</h3>
               <NoteList notes={filteredActiveNotes} onDelete={this.onDeleteHandler} onArchived={this.onArchiveHandler} />
               <br /><br />
               <h3 className="note-app__title-item">Archived Notes</h3>
               <NoteList notes={filteredArchivedNotes} onDelete={this.onDeleteHandler} onArchived={this.onArchiveHandler} />
+
+              <Footer/>
 
               {/* <NoteList notes={this.state.notes} onDelete={this.onDeleteHandler}/> */}
               </div>
