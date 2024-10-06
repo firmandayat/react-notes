@@ -33,9 +33,6 @@ input::placeholder, textarea::placeholder {
   z-index: 1;
   position: fixed;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 4px 16px;
   border-bottom: 1px solid #aaa;
   color: white;
@@ -46,6 +43,22 @@ input::placeholder, textarea::placeholder {
   margin: 8px 0;
   flex: 1;
   color: white;
+}
+
+.note-app__search{
+  position: fixed;
+  outline-color: transparent;
+  border-color: white;
+  right: 1rem;
+  top: 0;
+  z-index: 1;
+  height: 10px;
+  width: 150px;
+  background-color: white;
+}
+
+.note-app__search input{
+  color: red;
 }
 
 .note-app__body {
