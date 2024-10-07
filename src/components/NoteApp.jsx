@@ -1,16 +1,16 @@
-import React from 'react';
-import NoteList from './NoteList';
-import { getInitialData } from '../utils/index';
-import NoteInput from './NoteInput';
-import { FaSearch } from 'react-icons/fa';
-import Footer from './Footer';
+import React from "react";
+import NoteList from "./NoteList";
+import { getInitialData } from "../utils/index";
+import NoteInput from "./NoteInput";
+import { FaSearch } from "react-icons/fa";
+import Footer from "./Footer";
 
 class NoteApp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       notes: getInitialData(),
-      searchNote: '',
+      searchNote: "",
     };
     this.onDeleteHandler = this.onDeleteHandler.bind(this);
     this.onAddNoteHandler = this.onAddNoteHandler.bind(this);
@@ -19,16 +19,16 @@ class NoteApp extends React.Component {
   }
 
   componentDidMount() {
-    window.ScrollReveal().reveal('.reveal', {
+    window.ScrollReveal().reveal(".reveal", {
       duration: 1000,
-      distance: '50px',
-      origin: 'bottom',
+      distance: "50px",
+      origin: "bottom",
       reset: true,
     });
-    window.ScrollReveal().reveal('.reveal1', {
+    window.ScrollReveal().reveal(".reveal1", {
       duration: 2000,
-      distance: '100px',
-      origin: 'bottom',
+      distance: "100px",
+      origin: "bottom",
       reset: true,
     });
   }

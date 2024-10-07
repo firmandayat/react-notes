@@ -1,6 +1,6 @@
-import React from 'react';
-import DeleteButton from './DeleteButton';
-import ArchivedButton from './ArchivedButton';
+import React from "react";
+import DeleteButton from "./DeleteButton";
+import ArchivedButton from "./ArchivedButton";
 
 function NoteItemBody({
   title,

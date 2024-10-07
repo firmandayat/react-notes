@@ -1,5 +1,5 @@
-import React from 'react';
-import NoteItem from './NoteItem';
+import React from "react";
+import NoteItem from "./NoteItem";
 
 function NoteList({ notes, onDelete, onArchived }) {
   return (

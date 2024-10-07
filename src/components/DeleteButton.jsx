@@ -1,5 +1,5 @@
-import React from 'react';
-import { FaTrash } from 'react-icons/fa';
+import React from "react";
+import { FaTrash } from "react-icons/fa";
 
 function DeleteButton({ id, onDelete }) {
   return (

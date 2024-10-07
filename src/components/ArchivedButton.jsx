@@ -1,5 +1,5 @@
-import React from 'react';
-import { FaArchive } from 'react-icons/fa';
+import React from "react";
+import { FaArchive } from "react-icons/fa";
 
 function ArchivedButton({ id, onArchived, isArchived }) {
   return (
@@ -8,7 +8,7 @@ function ArchivedButton({ id, onArchived, isArchived }) {
       onClick={() => onArchived(id)}
     >
       <FaArchive />
-      <span> {isArchived ? 'Unarchive' : 'Archive'}</span>
+      <span> {isArchived ? "Unarchive" : "Archive"}</span>
     </button>
   );
 }

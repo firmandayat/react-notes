@@ -1,13 +1,13 @@
-import React from 'react';
-import { FaPlusCircle } from 'react-icons/fa';
+import React from "react";
+import { FaPlusCircle } from "react-icons/fa";
 
 class NoteInput extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      title: '',
-      body: '',
+      title: "",
+      body: "",
       titleMaxLength: 50,
     };
 
