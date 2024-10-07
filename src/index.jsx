@@ -6,4 +6,4 @@ import NoteApp from './components/NoteApp';
 import './styles/style.css';
 
 const root = createRoot(document.getElementById('root'));
-root.render(<NoteApp/>);
+root.render(<NoteApp />);
